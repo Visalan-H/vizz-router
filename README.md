@@ -2,6 +2,8 @@
 
 A simple, lightweight React router implementation for single-page applications.
 
+[![npm version](https://img.shields.io/npm/v/vizz-router.svg?style=flat&color=black&labelColor=white)](https://www.npmjs.com/package/vizz-router)
+
 ## Installation
 
 ```bash
