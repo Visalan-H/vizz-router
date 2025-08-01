@@ -1,0 +1,35 @@
+{
+  "name": "vizz-router",
+  "version": "1.0.0",
+  "description": "Simple version of react router that only I'll be using (probably)",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib --copy-files",
+    "build:esm": "babel src --out-dir lib --env-name esm --copy-files --out-file-extension .esm.js",
+    "build:all": "npm run clean & npm run build & npm run build:esm",
+    "prepublishOnly": "npm run build:all",
+    "clean": "rmdir /s /q lib 2>nul || del /q lib\\* 2>nul || echo lib cleaned"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.0",
+    "@babel/core": "^7.22.0",
+    "@babel/preset-react": "^7.22.0"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "navigation",
+    "spa",
+    "routing",
+    "browser-router"
+  ],
+  "author": "Visalan H",
+  "license": "MIT"
+}
